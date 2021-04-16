@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+#main{
+	margin-left:50px;
+	margin-right:50px;
+	margin-top:50px;
+}
+#banner{
+	height:200px;
+	background-color:darkslateblue;
+	background-image:url(https://st4.depositphotos.com/4667115/23149/v/600/depositphotos_231490546-stock-video-binary-code-background-cloud-computing.jpg);
+	font-size:2em;
+	color:#ffff00;
+	font-weight:900;
+	text-shadow:8px 8px 5px red;
+	text-align:center;
+	padding-top:10px;
+}
+#nav{
+	height:30px;
+	background-color:#39C;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+#left{
+	float:left;
+	width:15%;
+	background-color:#FCF;
+	min-height:500px;
+}
+.content
+{
+	float:left;
+	width:70%;
+	background-color:Grey;
+	min-height:500px;
+}
+#right{
+	float:right;
+	width:15%;
+	background-color:#FCF;
+	min-height:500px;
+}
+
+#menu li{
+	display:inline-block;
+	background-color:#36F;
+	line-height:20px;
+	position:relative;
+	width:100px;
+	height:28px;
+	border:1px dotted #fff;
+}
+#menu li #submenu{
+	display:none;
+}
+a{
+	text-decoration:none;
+	color:#fff;
+}
+a:hover{
+	color:#ffff00;
+	font-size:1.2em;
+}
+#menu li:hover #submenu{
+	display:block;
+	position:absolute;
+	margin:0px;
+	padding:0px;
+}
+.ad{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:30px;
+	border: 1px solid blue;
+	border-radius:25px;
+	box-shadow:10px 10px gray;
+	height:100px;
+	background-color:#ffff00;
+}
+
+.a,.b,.c{
+	border:1px solid blue;
+	height:100px;
+	background-color:#ffff00;
+	height:240px;
+	width:30%;
+	float:left;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.b{
+	overflow:hidden;
+	line-height:30px;
+}
+.c
+{
+	overflow:scroll;
+}
+	
+#footer{
+	clear:both;
+	width: 100%;
+	height:50px;
+	background-color:#39C;
+	text-align: center;
+	float: left;
+}
