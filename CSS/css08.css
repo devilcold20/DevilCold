@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+@charset "utf-8";
+/* CSS Document */
+
+header{
+	font-size:3em;
+	color:blue;
+	text-shadow:10px 10px 3px #CCCCFF;
+	font-weight:900;
+}
+.tieude{
+	font-size:2em;
+	color:cadetblue;
+	text-shadow:10px 10px 3px black;
+	font-weight:900;
+	float: left;
+}
+hr{
+	color:cyan;
+	border-width:5px;
+}
+nav{
+	line-height:60px;
+	text-align:center;
+	background-color:#FCF;
+}
+nav a{
+	text-decoration:none;
+	font-size:1.2em;
+	color:#003;
+	margin-right:30px;
+}
+h2 a:hover{
+	color:#C0F;
+}
+
+h2{
+	color:#09F;
+}
+.login{
+	float:right;
+}
+button {color: white; background-color: lightblue;}
+a:hover{
+	color:red;
+}
