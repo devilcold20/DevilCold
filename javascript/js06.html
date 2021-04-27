@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Js 06</title>
+<style>
+	caption {
+		font-size: 20px;
+		font-weight: bold;	
+	}
+	td {
+		border: 2px double;
+	}
+</style>
+</head>
+
+<body>
+	<script>
+		var html = "<table><caption>BẢNG CỬU CHƯƠNG</caption>";
+		var hang, cot, i=2, j;
+		for (hang = 1; hang <=2; hang ++) {
+			html += "<tr>"
+			for (cot = 1; cot <= 4; cot++) {
+				html += "<td>";
+				for ( j=2; j<=9; j++)
+					html = html + i + "*" + j + " = " + i*j + "<br>";
+				i++;
+				html += "</td>";
+			}
+			html += "</tr>";
+		}
+		html += "</table>";
+	document.write (html);
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function reverese() {
+           var str = document.getElementById("one").value;
+		arr = str.split(" ");
+		var kq = "";
+		for (var i = arr.length - 1; i >= 0 ; i--)
+		{
+			kq += arr[i] + " ";
+		}
+		document.getElementById("one").value = kq.trim();
+
+        }
+        function f1() {
+            var str= new Array();
+            str = document.getElementById("one").value;
+            f(str);
+        }
+        function f(str) {
+            var str_1="";
+            str=str.toLowerCase().trim();
+            for (var i=0;i < str.length;i++)
+            {
+                if (!(str[i] == " " && str[i+1] == " ")) {
+                        str_1 += str[i];
+                }
+            }
+            str = str_1;
+            str_1 = str[0].toUpperCase();
+            for (var i=1;i < str.length;i++)
+            {
+                if (str[i-1] == " ") {
+                    str_1 += str[i].toUpperCase();
+                }else str_1+=str[i];
+            }
+            document.getElementById("one").value = str_1;
+        }
+    </script>
+</head>
+<body>
+<table>
+    <caption><h1>XỬ LÝ CHUỖI</h1></caption>
+    <tr>
+        <td>Chuỗi ban đầu</td>
+        <td><INPUT type="text" id="one"></tD>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <INPUT type="button" value="Đảo chuỗi" onclick="reverese()">
+            <INPUT type="button" value="Chuẩn hóa chuỗi" onclick="f1()">
+        </tD>
+    </tr>
+</table>
+</body>
+</html>

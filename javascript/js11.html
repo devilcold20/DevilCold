@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+	<script>
+		function statistic() {
+			var s1 = document.getElementById("a").value;
+			var arr = s1.split(" ");
+			var i=0, words=0;
+			var arrKq = [];	//mảng chưa kết quả
+			for (i=0; i<arr.length; i++) {
+				if (arr[i].trim() != "" )
+					words ++;			
+			}
+			var kq = "Characters: " + s1.length +
+					"<br>Words: " + words +"<br>";
+			for (i=0; i<s1.length; i++) {
+				if (s1.charCodeAt(i) >= 97 && s1.charCodeAt(i) <= 122) {//kí tự thường
+					if (!isNaN(arrKq[s1.charCodeAt(i) - 32])) //là số
+						arrKq[s1.charCodeAt(i)] ++;
+					else arrKq[s1.charCodeAt(i)] = 1;
+				}
+				else { //Cac ki tu hoa va ki tu khac
+					if (!isNaN(arrKq[s1.charCodeAt(i)]))
+						arrKq[s1.charCodeAt(i)]++;
+					else arrKq[s1.charCodeAt(i)]=1;
+				}
+			}
+			for (i=0; i<arrKq.length; i++) {
+				if (!isNaN(arrKq[i]))
+					kq +=  "Characters ' " + String.fromCharCode(i) + " ': " + arrKq[i] + "<br>";	
+			}
+			document.getElementById("ketqua").innerHTML = kq;		
+			}
+	</script>
+</head>
+<body>
+	<h1>String Statistic</h1>
+    <label>String: </label>
+    <input type="text" id="a" value="Hello, How are you? 1123425" ><br>
+    <button onclick="statistic()">Statistic</button>
+    <p id="ketqua"></p>
+</body>
+</html>
