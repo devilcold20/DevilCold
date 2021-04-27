@@ -5,48 +5,44 @@
 <title>JS 04</title>
 <script>
 function tinhtoan(){
-	
-	var so1 = parseInt(document.getElementById("txtSo1").value);
-	var so2 = parseInt(document.getElementById("txtSo2").value);
+	var so1 = parseInt(document.forms.myform["txtSo1"].value);
+	var so2 = parseInt(document.forms.myform["txtSo2"].value);
 	var op = document.forms.myform["op"].value;
-	var kq = 0;
+	kq =0;
 	switch(op)
 	{
-		case "+": {kq = so1 + so2;break;}
-		case "-": {kq = so1 - so2;break;}
-		case "*": {kq = so1 * so2;break;}
+		case "+": kq = so1 + so2;break;
+		case "-": kq = so1 - so2;break;
+		case "*": kq = so1 * so2;break;
 		case "/": 
-		{
 		if(so2!=0)	
 		{
 			var x = so1/so2;
-			kq=x.tofixed(2);
-            
+			kq=x.toFixed(2);
 		}
 		else
 			kq="Không thể thực hiện phép chia cho 0";
-		
-            break;
-		}
+		break;
 	}
-    document.getElementById("ketqua").innerHTML = kq;
+	document.forms.myform["kq"].value=kq;
+	return false;
 }
 </script>
 
 </head>
 <body>
-<form id="myform">
+<form id="myform" onSubmit="return tinhtoan()">
     <table width="50%" border="1">
         <tr>
             <th colspan="2"><h2>CÁC PHÉP TÍNH SỐ HỌC</h2></th>
         </tr>
         <tr>
             <td>Số thứ nhất</td>
-            <td><input type="text" id="txtSo1"></td>
+            <td><input type="text" id="txtSo1" size="10"></td>
         </tr>
         <tr>
             <td>Số thứ hai</td>
-            <td><input type="text" id="txtSo2"></td>
+            <td><input type="text" id="txtSo2" size="10"></td>
         </tr>
         <tr>
             <td>Các phép toán</td>
@@ -61,11 +57,10 @@ function tinhtoan(){
         </tr>
         <tr>
             <td>
-                <button syle="color#" id="tinhtoan" onClick="tinhtoan()">Tính Toán</button>
-                <input type="reset" value="Hủy">    
+                <input type="submit" name="btCong" value="Thực hiện">
+                <input type="reset" value="Hủy">
             </td>
-            <td><input type="text" id="ketqua" /></td>
-            
+            <td><input type="text" name="kq" readonly ></td>
         </tr>
     </table>
 </form>
