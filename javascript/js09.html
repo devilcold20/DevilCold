@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS 09</title>
+<script> 
+    function replace(){
+        var s = document.getElementById("txtS").value;
+        var s1 = document.getElementById("txtS1").value;
+        var s2 = document.getElementById("txtS2").value;
+        var index = s.indexOf(s1);
+        while(index >= 0)
+        {
+            s = s.replace(s1,s2); // thay the van ban
+            index = s.indexOf(s1);// tim tiep tuc
+        }
+        document.getElementById("txtS").value = s;
+    }
+</script>
+
+</head>
+<body>
+<table><caption>Thay Thế Văn Bản</caption>
+<tr>
+    <td>Chuổi ban đầu</td>
+    <td>
+        <input type="text" id="txtS" vale="XYATZABCD" size="50">
+    </td>
+</tr>
+<tr>
+    <td>Chuổi bị thay thế</td>
+    <td>
+        <input type="text" id="txtS1" vale="ABCD" size="50">
+    </td>
+</tr>
+<tr>
+    <td>Chuổi thay thế</td>
+    <td>
+        <input type="text" id="txtS2" vale="1234" size="50">
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+        <button onclick="replace()" >Thuc Hien</button>
+    </td>
+</tr>
+</table>
+</body>
+</html>
