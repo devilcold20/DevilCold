@@ -1,10 +1,38 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>JS 12</title>
-</head>
+<!Doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS 13</title>
+        <style>
+            p {
+                background-color: darkblue;
+                font-weight:bold;
+                font-size: 14pt;
+                color:yellow;
+                padding:20px;
+            }
+            h1{color:red;}
+        </style>
+        <script>
+            function changeStyle(){
+                document.styleSheets[0].disabled=true;
+                document.styleSheets[1].disabled = true;
 
-<body>
-</body>
+            }
+            function defaulStyle(){
+                document.styleSheets[0].disabled= true;
+                document.styleSheets[1].disabled = true;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Thay đổi style</h1>
+        <input type="radio" name="style" onclick="defaulStyle()"> Mặc định <br>
+        <input type="radio" name="style" onclik="changeStyle()">Áp dụng style<br>
+        <p>
+            Click vào tùy chọn <q>Mặc Định</q> Chuyển về định dạng mặc định. <br>
+            <br>
+            Click vào tùy chọn <q>Áp dụng Style</q> Áp dụng style định dạng.<br>
+        </p>
+    </body>
 </html>
