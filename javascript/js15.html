@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title> JS 15 ResizeImage</title>
+        <style>
+            .large{
+                height: 75%;width:75%;
+            }
+            .medium{
+                height: 50%;width:50%;
+            }
+            .small{
+                height: 35%;width:35%;
+            }
+        </style>
+        <script>
+            function setImgSize(value){
+                document.getElementById("image").className = value;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Image Resizing</h1>
+        <br/>
+        <p id="scale"> Scale:
+            <input type="radio" name="scaler" value="small" onclick= "setImgSize(this.value)">35%
+            <input type="radio" name="scaler" value="medium" onclick= "setImgSize(this.value)">50%
+            <input type="radio" name="scaler" value="large" onclick= "setImgSize(this.value)">75%
+        </p>
+        <img id="image" class="large" src="sea.jpg"/>
+    </body>
+</html>
