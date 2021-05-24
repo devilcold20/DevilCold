@@ -1,78 +1,44 @@
-.logo{
-    width: 100%;
-    
-    display: inline-block;
-    height: 60px;
-    background-color: #5c90a9;
-    color: white;
-}
-.logo p{
-    padding-left: 15px;
-    font-size: 20px;
-}
-.logo p a:link,.logo p a:visited{
-    color:white;
-    text-decoration: none;
-}
-.logo p a:hover{
-    color:rgb(173, 192, 231);
-    cursor: pointer;
-}
-.menu{
-    width: 100%;
-    float: left;
-    height: 60px;
-    margin-top: 20px;
-}
-
-.menu  ul{
-    list-style: none;
-    margin-left: 350px;
-}
-.menu ul li{
-    position: relative;
-    display: block;
-    float: left;
-    margin: 5px 20px;
-}
-.menu ul li a:link,.menu ul li a:visited{
-    color:black;
-    text-decoration: none;
-}
-.menu ul li a:hover{
-    color:rgb(238, 136, 213);
-    font-size: 25px;
-}
-.banner{
-    width: 100%;
-    float: left;
-    height: 100%;
-    margin-top: 20px;
-}
-.footer{
-    width: 100%;
-    height: 120px;
-    float: left;
-    text-align: center;
-    background: url(image/footer.png);
-
-}
-.footer a:link,footer a:visited{
-    color: black;
-    text-decoration: none;
-} 
-.footer a:hover{
-    color: rgb(108, 116, 226);
-    
-} 
-.footer #ico1{
-    background: url(image/s-ico.png);
-    background-position: -68px 0;
-    width: 34px;
-    height: 34px;
-    display: inline-block;
-    vertical-align: middle;
-}
-#f1{
-    margin-top: 60px;
-}
+<!DOCTYPE html>
+<html><head>
+        <meta charset="=utf=8">
+        <title> UDW </title>
+        <link rel="stylesheet" href="cssIndex.css"> 
+    </head>
+    <body>
+         <!--Logo-->
+         <div class="logo">
+             <p><a>18510013 - Nguyễn Nguyệt Phương Bảo</a></p>
+         </div> 
+         <!--Logo-->
+         <div class="logo2">
+            <p>Ứng Dụng Web</p>
+        </div>  
+        <hr/>
+        <!--menu-->
+        <div class="menu" id="abc">
+            <ul class="menu1">
+                <li ><a href="#">Home</a></li>      
+                <li><a href="html.html">HTML</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="javascript.html">Javascript</a></li>
+                <li><a href="jquery.html">Jquery</a></li>
+                <li><a href="btnc.html">Bài Tập Nâng Cao</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr/>
+        <!--banner-->
+        <div class="banner">
+            <img src="image/bkg.jpg" alt="banner"style="width:100%;">
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <div id="f1">
+            <span id="ico1"></span>
+            <span>Email : </span>
+            <a href= "mailto:1851010013bao@ou.edu.vn">1851010013bao@ou.edu.vn</a>
+            </div>
+        </div>     
+    </body>
+</html>
+        
