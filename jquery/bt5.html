@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+    <script src="jq/js5.js"></script>
+    <style>
+
+        
+        img
+        {                
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>  
+    <script>
+        $(document).ready(function(){
+            $("img").mouseover(function(){
+                $(this).animate({
+                    width :"+=100px",  
+                    height :"+=100px"
+                })
+                
+            })
+            .mouseout(function(){
+                $(this).animate({
+                    width :"-=100px",  
+                    height :"-=100px"
+                })
+            })
+        })
+    </script>  
+
+</head>
+<body>
+    <div><img src="jq/js5.jpg" style="display: inline-block; width: 200px; height: 200px;"></div>    
+</body>

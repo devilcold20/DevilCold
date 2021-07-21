@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6</title>
+    <script src="jq/js6.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btMoveLeft").click(function(){
+                $("div").animate({
+                    left:'0'
+                },800)
+            })
+            $("#btMoveRight").click(function(){
+                var left = window.innerWidth - $("div").width() -15;
+                $("div").animate({
+                    left:left
+                },800)
+            })
+            $("#btMoveUp").click(function(){
+                $("div").animate({
+                    top:'0'
+                },800)
+            })
+            $("#btMoveDown").click(function(){
+                var top = window.innerHeight - $("div").height()-17;
+                $("div").animate({
+                    top:top
+                },800)
+            })
+        })
+    </script>
+    <style>
+        div
+        {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="btMoveLeft">Move Left</button>
+    <button id="btMoveRight">Move Right</button>
+    <button id="btMoveUp">Move Up</button>
+    <button id="btMoveDown">Move Down</button>
+    <p></p>
+
+</body>

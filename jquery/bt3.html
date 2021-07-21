@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style>
+	table{
+			width:100%;
+			border-collapse:collapse;
+		}
+		
+		table tr td{
+			width:30%;
+			border:1px solid red;
+			padding:5px;
+		}
+		
+		table tr th
+		{
+			border:1px solid #79ff4d;
+			padding:5px;
+			background-color:aliceblue;
+		}
+		.newBrgd{
+				background-color:#FF0066;
+			}
+		caption { font-size:1.5em;font-weight:bold;}
+</style>
+<script src="jq/js3.js"></script>
+
+<script>
+	$(document).ready(function() {
+        $("#change").click(function(){
+			$("tr:odd").addClass("newBrgd");
+		});
+		
+		$("#normal").click(function (){
+			$("tr:odd").removeClass("newBrgd");
+		});
+			
+    });
+</script>
+<title>Bài Tập 3</title>
+</head>
+
+<body>
+	<table>
+    	<caption>BẢNG GIÁ VẬT TƯ</caption>
+        <tbody><tr>
+        	<th>Tên vật tư</th>
+            <th>Đơn vị tính</th>
+            <th>Đơn giá </th>
+        </tr>
+        
+        <tr>
+        	<td>Cát</td>
+            <td>Khối</td>
+            <td>77,000</td>
+        </tr>
+       	<tr>
+        	<td>Đá</td>
+            <td>Khối</td>
+            <td>90,000</td>
+        </tr>
+        
+          <tr>
+        	<td>Xi măng Hà Tiên Loại 1</td>
+            <td>Bao</td>
+            <td>120,000</td>
+        </tr>
+          <tr>
+        	<td>Xi măng Hà Tiên Loại 2</td>
+            <td>Khối</td>
+            <td>100,000</td>
+        </tr>
+        
+        
+       
+    </tbody></table>
+    
+     <button id="change"> Đổi màu nền </button>
+        <button id="normal"> Màu nền mặc định </button>
+</body>

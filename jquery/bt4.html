@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4</title>
+    <script src="jq/js4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").click(function(){
+                var color = $(this).css("background-color");
+                var name;
+                switch(color)
+                { 
+                    case "rgb(255, 0, 0)": name = "Đỏ";break;
+                    case "rgb(0, 0, 255)": name = "Xanh dương";break;
+                    case "rgb(255, 0, 255)": name = "Tím";break;
+                    case "rgb(0, 255, 0)": name = "Xanh lá";break;
+                    
+                }
+                $("#result").html("Màu bạn chọn là " + name + ": " + color);
+                $("#result").css({'color': color,'font-weight': 'bold'});
+            });
+        });1
+    </script>
+    <style>
+        div
+        {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-left: 10px;
+        }
+        #result
+        {
+            clear: left;
+            width: 500px;
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Click lên các hình vuông</p>
+    <div style="background-color:blue;"></div>
+    <div style="background-color:rgb(255, 0, 0);"></div>
+    <div style="background-color:magenta;"></div>
+    <div style="background-color:#0f0"></div>
+    <div id="result"></div>
+</body>

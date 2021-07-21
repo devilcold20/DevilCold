@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="jq/js7.js"></script>
+
+
+<title>Bài Tập 7</title>
+<style>
+	body {
+			font:12px Arial, Helvetica, sans-serif;
+		}
+	#container
+	{
+			padding:"20px";
+	}
+	.panels,.panels a, panels li
+	{
+			height:190px;;
+			overflow:hidden;
+	}
+	.panels
+	{
+		background:#ddd;
+		margin:0 0 20px;
+		position:relative;
+		width:700px;
+	}
+	
+	
+	
+	.panels li
+	{
+		
+			float:left;
+			font-size:100px;
+			line-height:200px;
+			list-style:none;
+			text-align:center;
+			width:180px;
+	}
+	.panels li.last,.panels li:last-child
+            {
+                border:0;
+                float:none;
+                position:absolute;
+                top:0;
+                right:0;
+            }
+
+            .panels a
+            {
+                
+                color:#666;
+                display:block;
+                text-decoration:none;
+                width:100%;
+            }
+
+            .panels a:hover
+            {
+                background-color:#bbb;
+                background-position:center top bottom;
+                color:#000;
+                font-weight:bold;
+                text-shadow:#fff 0 5px 5px;
+            }
+</style><script>
+$(document).ready(function() {
+    var speed=200;
+	$('ul.panels li:last-child').addClass('last');
+	$('ul.panels li').hover(function () {
+		$(this).stop().animate(
+		{
+			width:'360px',
+			fontSize:'150px'	
+		},speed)
+		
+		.siblings('li').stop().animate({
+			width:'135px',
+			fontSize:'50px'
+		},speed);
+		
+	},
+	
+	function(){
+        $(this).stop().animate({
+            width:'180px',
+            fonntSize:'100px'
+        },speed)
+        .siblings('li').stop().animate({
+        width:'180px',
+        fontSize:'100px'},speed);
+    });
+})
+</script></head>
+
+
+
+<body>
+
+<div id="container">
+	<ul class="panels">
+    	<li style="width: 180px; font-size: 150px;">
+        	<a href="bt7.html#">1</a>
+        </li>
+         <li style="width: 180px; font-size: 100px;">
+        	<a href="bt7.html#">2</a>
+        </li>
+         <li style="width: 180px; font-size: 100px;">
+        	<a href="bt7.html#">3</a>
+        </li>
+         <li class="last" style="width: 180px; font-size: 100px;">
+        	<a href="bt7.html#">4</a>
+        </li>
+    </ul>
+</div>
+
+</body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 2</title>
+    <script src="jq/js2.js"></script>
+    <script>
+        $().ready(function(){
+            $("#btTotal").click(function(){
+                var d1 = $("#dayFrom").val();
+                var d2 = $("#dayTo").val();
+                d1 = new Date(d1);
+                d2 = new Date(d2);
+
+                var soNgay = (d2.getTime()-d1.getTime())/(3600*24*1000);
+                $("#result").text("Số ngày là: " + soNgay);
+            })
+        })
+    </script>
+</head>
+<body>
+    <table>
+        <caption>Tính số ngày giữa hai thời điểm</caption>
+        <tbody><tr>
+            <td>Từ ngày</td>
+            <td><input type="date" id="dayFrom"></td>
+        </tr>
+        <tr>
+            <td>Đến ngày</td>
+            <td><input type="date" id="dayTo"></td>
+        </tr>
+        <tr>
+            <td><button id="btTotal">Tính số ngày</button></td>
+            <td><span id="result"></span></td>
+        </tr>
+    </tbody></table>
+</body>
