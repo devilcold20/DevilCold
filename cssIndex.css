@@ -1,0 +1,86 @@
+.logo{
+    width: 100%;
+
+    display: inline-block;
+    height: 60px;
+    background-color: #5c90a9;
+    color: white;
+}
+.logo p{
+    padding-left: 15px;
+    font-size: 20px;
+}
+.logo p a:link,.logo p a:visited{
+    color:white;
+    text-decoration: none;
+}
+.logo p a:hover{
+    color:rgb(173, 192, 231);
+    cursor: pointer;
+}
+.logo2{
+    width: 100%;
+    display: inline-block;
+    height: 80px;
+    color: black;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.menu{
+    width: 100%;
+    float: left;
+    height: 60px;
+}
+
+.menu  ul{
+    list-style: none;
+    margin-left: 350px;
+}
+.menu ul li{
+    position: relative;
+    display: block;
+    float: left;
+    margin: 5px 20px;
+}
+.menu ul li a:link,.menu ul li a:visited{
+    color:black;
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    color:rgb(238, 136, 213);
+    font-size: 25px;
+}
+.banner{
+    width: 100%;
+    float: left;
+    height: 100%;
+    margin-top: 20px;
+}
+.footer{
+    width: 100%;
+    height: 120px;
+    float: left;
+    text-align: center;
+    background: url(image/footer.png);
+
+}
+.footer a:link,footer a:visited{
+    color: black;
+    text-decoration: none;
+} 
+.footer a:hover{
+    color: rgb(108, 116, 226);
+
+} 
+.footer #ico1{
+    background: url(image/s-ico.png);
+    background-position: -68px 0;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+}
+#f1{
+    margin-top: 60px;
+}
